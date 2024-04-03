@@ -1,0 +1,15 @@
+To check version 
+node --version, node -version
+npm
+
+To Update node
+npm install -g node / npm install -g n
+
+To install pip
+npm i pip
+
+
+For initilise project in node js
+
+npm init / npm init -y
+
