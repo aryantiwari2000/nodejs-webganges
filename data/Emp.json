@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Raj Singh",
+        "mob":6868689,
+        "course":"Node-JS",
+        "city":"LKO"
+    },
+    {
+        "name":"Vimal Kishore",
+        "mob":9674556,
+        "course":"Node-JS",
+        "city":"IND"
+    },
+    {
+        "name":"Vinay Tiwari",
+        "mob":866454545,
+        "course":"React-JS",
+        "city":"CDG"
+    },
+    {
+        "name":"Ran Naidu",
+        "mob":9765656565,
+        "course":"Vue-JS",
+        "city":"MUM"
+    }
+ 
+]
