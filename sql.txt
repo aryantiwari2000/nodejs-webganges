@@ -1,0 +1,20 @@
+//create database
+create database AryanDB
+
+//create Table
+create Table
+create table reg( id int, nm varchar(20) , mob varchar(15), addr varchar(50) )
+
+insert into reg values(101,'Raj Singh','5454545','CNB');
+insert into reg(nm,addr) values('Vinay Singh','8484555');
+insert into reg values(102,'Ram Singh','78787878','ALD');
+insert into reg values(103,'Raju Singh','1212121','WSD');
+insert into reg values(104,'Rampal Singh','56565656','KNP');
+insert into reg values(105,'Rakesh Singh','2121212','TLP');
+
+select * from reg
+select nm,addr from reg;
+select nm as NAME, addr as CITY from reg;
+select nm as NAME, addr as CITY from reg where id=103;
+
+
