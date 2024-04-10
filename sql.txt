@@ -1,9 +1,15 @@
 //create database
 create database AryanDB
 
+DML(Data Manipulation Language): Select, insert , Update, Delete
+(CRUD)
+DDL(Data Definition Language): create ,alter ,drop
+DCL(Data control Lang.):Truncate ,rollback, commit
+
 //create Table
 create Table
 create table reg( id int, nm varchar(20) , mob varchar(15), addr varchar(50) )
+
 
 insert into reg values(101,'Raj Singh','5454545','CNB');
 insert into reg(nm,addr) values('Vinay Singh','8484555');
@@ -16,5 +22,64 @@ select * from reg
 select nm,addr from reg;
 select nm as NAME, addr as CITY from reg;
 select nm as NAME, addr as CITY from reg where id=103;
+
+
+select * from reg where id=104;
+select * from reg where id between 102 and 104;
+select * from reg where id in(102,104);
+
+select * from reg order by id asc;
+select * from reg order by id asc limit 3;
+select * from reg order by id desc;
+select * from reg order by id desc limit 3;
+
+//filter 
+
+select * from reg where nm like 'm%';
+select * from reg where nm like '%r';
+select * from reg where nm like 'v_i_ha';
+select * from reg where nm like '[^arj]%'(work in msql)
+select * from reg where nm like '[arj]%';(work in msql)
+
+
+
+
+//delete command
+
+truncate table reg;(for delete the whole)
+delete from reg;(this will create memory space on delete section and next table table will start after this )
+dalete nm as NAME, addr as CITY from reg where id=103;
+delete from reg where id=104;
+delete from from reg where id between 102 and 104;
+delete from reg where id in(102,104);
+delete from reg where nm like 'm%';
+delete from reg where nm like '%r';
+
+//update command
+
+update reg set nm='Rajat Bhatia', mob='4343444',addr='BPL';
+update reg set nm='Rajat Bhatia', mob='4343444',addr='BPL' where id=102;
+update reg set nm='Rajat Bhatia', mob='4343444',addr='BPL' where id between 102 and 104;
+update reg set nm='Rajat Bhatia', mob='4343444',addr='BPL' where id in (102,104);
+update reg set nm='Rajat Bhatia', mob='4343444',addr='BPL' where nm like 'm%'; 
+update reg set nm='Rajat Bhatia', mob='4343444',addr='BPL' where nm like 'v_i_ha_'; 
+update reg set nm='Rajat Bhatia', mob='4343444',addr='BPL' where nm like '[arj]%';(work in msql) ;
+update reg set nm='Rajat Bhatia', mob='4343444',addr='BPL' where nm like '[arj]%';(work in msql) ;
+
+
+
+//alter command
+alter table reg add column img varchar(50);
+alter table reg add column id int auto_increment not null primary key;
+alter table reg drop img;
+alter table reg drop id;
+drop table reg;
+drop database aryanDB;
+insert into reg(nm,mob,addr) values('Virendra','8575766','IND');
+
+
+
+
+
 
 
